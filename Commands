@@ -1,0 +1,21 @@
+Aula de GitOps:
+
+minikube start -p pacman
+minikube addons enable ingress -p pacman
+
+kubectl apply -f pacman.yaml # deployment
+kubectl create -f service.yaml # service
+kubectl apply -f ingress.yaml # ingress 
+kubectl apply -f hpa.yaml # autoscale
+
+##### 
+ARGOCD
+
+kubectl create ns argocd # namespace
+kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml # manifest
+kubectl port-forward svc/argocd-server 8080:443 # argocd on web
+
+kubectl get secrets # get secrets
+kubectl get secret argocd-initial-admin-secret -o=yaml # encoded password
+echo Nm40VjNyeEVWSDQ4VTVZTA== | base64 --decode # decode password
+
