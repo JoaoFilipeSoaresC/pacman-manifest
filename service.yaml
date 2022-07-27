@@ -5,7 +5,7 @@ metadata:
   labels:
     app: pacman-service
   name: pacman-service
-  namespace: default
+  namespace: argocd
   resourceVersion: "8514"
   uid: 138d9e8e-a109-491a-9609-3f7242281234
 spec:

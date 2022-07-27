@@ -3,7 +3,7 @@ kind: HorizontalPodAutoscaler
 metadata:
   creationTimestamp: "2022-07-27T09:26:38Z"
   name: pacman
-  namespace: default
+  namespace: argocd
   resourceVersion: "11303"
   uid: 768b6d51-8a7d-483b-a0b6-20e33746ef6c
 spec:
